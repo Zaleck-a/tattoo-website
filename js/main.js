@@ -1,11 +1,13 @@
+
+
 //INICIO Deslizar imagenes
 let animado = document.querySelectorAll('.animado');
 function mostrarScroll(){   
     let scrollTop = document.documentElement.scrollTop;
     for(let i = 0; i < animado.length; i++ ){
         let alturaAnimado = animado[i].offsetTop; //offsetTop= altura de el inicio del elemento al inicio de la pagina
-        console.log(alturaAnimado);
-        if(alturaAnimado - 700 < scrollTop){
+
+        if(alturaAnimado - 500 < scrollTop){
 
             animado[i].style.opacity = 1;
             animado[i].classList.add("mostrarArriba");
@@ -16,6 +18,8 @@ function mostrarScroll(){
     
 }
 window.addEventListener('scroll', mostrarScroll);
+
+
 
 //FIN Deslizar imagenes
 
