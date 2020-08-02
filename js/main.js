@@ -7,7 +7,7 @@ function mostrarScroll(){
     for(let i = 0; i < animado.length; i++ ){
         let alturaAnimado = animado[i].offsetTop; //offsetTop= altura de el inicio del elemento al inicio de la pagina
 
-        if(alturaAnimado - 500 < scrollTop){
+        if(alturaAnimado - 600 < scrollTop){
 
             animado[i].style.opacity = 1;
             animado[i].classList.add("mostrarArriba");
@@ -39,3 +39,31 @@ window.addEventListener("scroll", function(){
 });
 
 //FIN ANIMACION MENU 
+
+
+// INICIO DEL LIGHT BOX
+const images = document.querySelectorAll('.img');
+const containerImage = document.querySelector('.container-img');
+const imagesContainer = document.querySelector('.img-show');
+
+images.forEach(image => {
+    image.addEventListener('click', ()=>{
+        
+        addImage(image.getAttribute('src'), image.getAttribute('alt'));
+    })
+})
+
+
+const addImage = (srcImage, altImage)=>{
+    containerImage.classList.toggle('move');
+    imagesContainer.classList.toggle('show');
+    imagesContainer.src = srcImage;
+}
+
+
+containerImage.addEventListener('click', ()=> {
+    containerImage.classList.toggle('move');
+    imagesContainer.classList.toggle('show');
+});
+
+//FIN DEL LIGHT BOX

@@ -220,9 +220,14 @@ section.fade{
 
 /*APARTADO 2*/
 
+#enlace-menu-2{
+    padding: 15px;
+}
+
 #menu-2{
     width: 100%;
-    margin-top: 50px;
+    margin-top:50px;
+    padding: 10px;
 }
 
 #menu-2 h2{
@@ -234,38 +239,104 @@ section.fade{
     font-family: 'Poppins', sans-serif;
     font-weight: 500;
     letter-spacing: 2px;
+    
 }
+
 
 #artistas{
     display: flex;
+    flex-flow: row wrap;
     width: 100%;
+    height: 480px;
     padding: 30px;
     background-color: rgb(41, 40, 40);
     justify-content: space-evenly;
 }
 
+
 .animado{
-    background-color: #000;
-    color: #fff;
+    width: calc(100%/5);
+    height: 100%;
     opacity: 0;
     transition: all .3s;
-    
 }
 
 .animado img{
-    display: block;
-    filter: grayscale(100%);
-    border-top: 20px;
-    width: 250px;
-    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    filter: brightness(40%);
+    object-fit: cover;
     transition: all .3s;
 }
 
+.info{
+    position: relative;
+    bottom: 20%;
+    transform: translateY(-50%);
+	display:block;
+    margin:0 auto;
+    padding: 5px;
+}
+
+.info span{
+	display:block;
+	width:90%;
+    font-weight:bold; 
+    color:#efefef; 
+    font-size:35px;
+}
+
+.info strong{
+	display:block;
+	width:90%;
+	font-weight:400;
+	font-style:italic; color:#8c8c8c; font-size:15px;
+}
+
+
+/*BOTON ANIMADO*/
+
+
+.animado button{
+	margin:0 auto;
+	width:auto;
+	height:auto;
+	line-height:auto;
+	background:rgba(0,0,0,.5);
+	color: #444444;
+	font-weight:bold;
+	font-size:25px;
+	font-weight:bold;
+	display:block;
+	position:relative;
+	text-align:center;
+	padding:.3em .6em .3em .6em;
+    top:10%;
+    left: 85px;
+    bottom: 50px;
+    border: none;
+    cursor: pointer;
+}
+
+.animado:hover button{
+	color:#eeeeee;
+	background:#000;
+    opacity: 1;
+	transition:all .8s ease-out;
+}
+
+.animado button:hover{
+	background:rgba(0,160,160,.9);
+	transition:all .4s ease-out;
+}
+
+/*IMAGEN ANIMCACION*/
+
 .animado:hover img{
-    filter: grayscale(0%);
+    filter: brightness(100%);
 }
 .animado:hover{
-    transform: scale(.95);
+    transform: scale(1.05);
     box-shadow: 3px 3px 10px rgba(0,0,0,0.6);
     cursor: pointer;
 }
@@ -292,9 +363,99 @@ section.fade{
     }
 }
 
+/*APARTADO 3*/
+
+#enlace-menu-3{
+    padding: 15px;
+}
+#menu-3{
+    width: 100%;
+    margin-top:50px;
+    padding: 10px;
+}
+
+#menu-3 h2{
+    display: block;
+    text-align: center;
+    font-size: 40px;
+    text-transform: uppercase;
+    color: #FFF;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    letter-spacing: 2px;
+    
+}
+
+#trabajos{
+    display: flex;
+    flex-flow: row wrap;
+    width: 100%;
+    background-color: rgb(41, 40, 40);
+    justify-content: center;
+    padding: 10px;
+}
+
+.article{
+    display: block;
+    width: calc(100%/4);
+    height: 264px;
+    padding: 10px;
+}
+
+.article img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    cursor: pointer;
+    
+}
+.article img:hover{
+    transform: scale(1.05);
+    filter: grayscale(50%);
+    transition: all .3s;
+}
 
 
+/*EFECTO LIGHTBOX*/
 
+.container-img{
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 5%;
+    left: 0;
+    transform: translateX(-100%);
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform .4s ease-in;
+}
+
+.move{
+    transform: translateX(0);
+}
+
+.img-show{
+    height: 80%;
+    transform: scale(0);
+    display: block;
+    object-fit: cover;
+    transition: transform .2s .4s;
+}
+
+.show{
+    transform: scale(1);
+}
+
+.bx.bx-x{
+    position: absolute;
+    color: white;
+    top: 10%;
+    right: 10px;
+    font-size: 40px;
+    cursor: pointer;
+}
 
 
 /*PIE DE PAGINA
