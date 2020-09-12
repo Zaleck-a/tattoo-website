@@ -19,6 +19,15 @@
     <!--BOX-ICON-->
     <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
 
+    <!--ANIMATE CSS-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" />
+
+    <!--fonts google-->
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!--font awesome-->
+
+    <script src="https://kit.fontawesome.com/60a3c47ded.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -27,9 +36,11 @@
     <!--Inicio de CABECERA-->
     <header id="header">
         <!--LOGO-->
-        
-        <a href="index.html" class="logo"><img src="./img/logo-inv.png" alt="roak house"></a>
-        
+
+        <div>
+            <a href="index.html" class="logo"><img src="./img/logo-inv.png" alt="roak house"></a>
+        </div>
+
         <!--INICIO DEL MENU-->
         <nav id="menu">
             <ul>
@@ -37,7 +48,7 @@
                 <li><a class="left" href="#enlace-menu-1">NOSOTROS</a></li>
                 <li><a class="left" href="#enlace-menu-2">ARTISTAS</a></li>
                 <li><a class="left" href="#enlace-menu-3">TATUAJES</a></li>
-                <li><a class="left" href="#">CONTACTO</a></li>
+                <li><a class="left" href="#enlace-menu-4">CONTACTO</a></li>
             </ul>
         </nav>
         <!--FIN DEL MENU-->
@@ -52,9 +63,10 @@
             <section id="img-slider" class="miSlider fade"><img src="./img/slider2.jpg" title="artista2"></section>
             <section id="img-slider" class="miSlider fade"><img src="./img/slider3.jpg" title="artista3"></section>
         </div>
-
-        <a href="#" id="btn-prev" onclick="avanzaSlider(-1)">&#10094</a>
-        <a href="#" id="btn-next" onclick="avanzaSlider(1)">&#10095</a>
+        <div id="botones">
+            <a href="#" id="btn-prev" onclick="avanzaSlider(-1)">&#10094</a>
+            <a href="#" id="btn-next" onclick="avanzaSlider(1)">&#10095</a>
+        </div>
 
     </div>
 
@@ -63,142 +75,220 @@
     <!--INICIO DE CONTENIDO-->
     <div id="enlace-menu-1"></div>
     <div id="menu-1">
-        
+
         <div id="nosotros">
             <h2>Nuestra Filosofia</h2>
             <p>
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.  
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has
+                survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with
+                desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
             </p>
             <br>
             <p>
-                and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s.  
+                and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s.
             </p>
         </div>
         <div id="logo-filosofia">
-            <img src="./img/logo-inv.png" title="Roack house"/>
+            <img src="./img/logo-inv.png" title="Roack house" />
         </div>
 
     </div>
-    
+
     <div id="enlace-menu-2"></div>
     <div id="menu-2">
         <h2>NUESTROS ARTISTAS</h1>
-    
-        <div id="artistas">    
-            <div class="animado">
-                <img src="./img/artista1.jpg" title="Happy trees">
-                <p class="info">
-                <span>Humberto Suazo</span>
-                <strong>Tattoo Master</strong>
-                <button>+</button>
-                </p>
+
+            <div id="artistas">
+                <div class="animado">
+                    <!-- <img src="./img/artista1.jpg" title="Happy trees"> -->
+                    <div class="foto-artista1"></div>
+                    <p class="info">
+                        <span>Roberto Castillo</span>
+                        <strong>Tattoo Master</strong>
+                        <button>+</button>
+                    </p>
+                </div>
+                <div class="animado">
+                    <div class="foto-artista2"></div>
+                    <p class="info">
+                        <span>Francisco Meza</span>
+                        <strong>Tattoo Master</strong>
+                        <button>+</button>
+                    </p>
+                </div>
+                <div class="animado">
+                    <div class="foto-artista3"></div>
+                    <p class="info">
+                        <span>Xavier Rodriguez</span>
+                        <strong>Tattoo Master</strong>
+                        <button>+</button>
+                    </p>
+                </div>
+
             </div>
-            <div class="animado">
-                <img src="./img/artista2.jpg" title="Happy trees">
-                <p class="info">
-                    <span>Jesus Arellano</span>
-                    <strong>Tattoo Master</strong>
-                    <button>+</button>
-                </p>
-            </div>
-            <div class="animado">
-                <img src="./img/artista3.jpg" title="Happy trees">
-                <p class="info">
-                    <span>Guillermo Franco</span>
-                    <strong>Tattoo Master</strong>
-                    <button>+</button>
-                </p>
-            </div>
-            
-        </div>
     </div>
 
     <div id="enlace-menu-3"></div>
     <div id="menu-3">
         <h2>TATUAJES</h1>
-    
-        <div id="trabajos">    
-            <article class="article">
-                <img class="img" src="./img/trabajos/t2.jpg" title="Happy trees">
-                
-            </article>
-            <article class="article">
-                <img class="img" src="./img/trabajos/t2.jpg" title="Happy trees">
-                
-            </article>
-            <article class="article">
-                <img class="img" src="./img/trabajos/t2.jpg" title="Happy trees">
-                
-            </article>
-            <article class="article">
-                <img class="img" src="./img/trabajos/t2.jpg" title="Happy trees">
-                
-            </article>
-            <article class="article">
-                <img class="img" src="./img/trabajos/t2.jpg" title="Happy trees">
-            </article>
-            <article class="article">
-                <img class="img" src="./img/trabajos/t2.jpg" title="Happy trees">
-            </article>
-            <article class="article">
-                <img class="img" src="./img/trabajos/t2.jpg" title="Happy trees">
-            </article>
-            <article class="article">
-                <img class="img" src="./img/trabajos/t2.jpg" title="Happy trees">
-                
-            </article>
-            <article class="article">
-                <img class="img" src="./img/trabajos/t2.jpg" title="Happy trees">
-                
-            </article>
-            <article class="article">
-                <img class="img" src="./img/trabajos/t2.jpg" title="Happy trees">
-                
-            </article>
-            <article class="article">
-                <img class="img" src="./img/trabajos/t2.jpg" title="Happy trees">
-                
-            </article>
 
-            <div class="container-img">
-                <img class="img-show" src="" alt="">
-                <i class="bx bx-x"></i>
+            <div id="trabajos">
+                <article class="article">
+                    <img class="img" src="./img/trabajos/t2.jpg" title="Happy trees">
+
+                </article>
+                <article class="article">
+                    <img class="img" src="./img/trabajos/t2.jpg" title="Happy trees">
+
+                </article>
+                <article class="article">
+                    <img class="img" src="./img/trabajos/t2.jpg" title="Happy trees">
+
+                </article>
+                <article class="article">
+                    <img class="img" src="./img/trabajos/t2.jpg" title="Happy trees">
+
+                </article>
+                <article class="article">
+                    <img class="img" src="./img/trabajos/t2.jpg" title="Happy trees">
+                </article>
+                <article class="article">
+                    <img class="img" src="./img/trabajos/t2.jpg" title="Happy trees">
+                </article>
+                <article class="article">
+                    <img class="img" src="./img/trabajos/t2.jpg" title="Happy trees">
+                </article>
+                <article class="article">
+                    <img class="img" src="./img/trabajos/t2.jpg" title="Happy trees">
+
+                </article>
+                <article class="article">
+                    <img class="img" src="./img/trabajos/t2.jpg" title="Happy trees">
+
+                </article>
+                <article class="article">
+                    <img class="img" src="./img/trabajos/t2.jpg" title="Happy trees">
+
+                </article>
+                <article class="article">
+                    <img class="img" src="./img/trabajos/t2.jpg" title="Happy trees">
+
+                </article>
+
+                <div id="lightBox" class="container-img">
+                    <img class="img-show" src="" alt="">
+                    <i class="bx bx-x"></i>
+                </div>
+            </div>
+    </div>
+
+    <!---Inicio CONTACTO--->
+    <div id="enlace-menu-4"></div>
+    <h2 id="contactoTitulo">Contacto</h2>
+    <div id="menu-4">
+        <div class="sombra">
+
+            <div id="formulario">
+
+                <h3>Contactanos</h3>
+                <form class="form" action="">
+                    <p class="caja">
+                        <label for="nombre">Nombre</label>
+                        <input class="campo" type="text" name="nombre" />
+                    </p>
+                    <p class="caja">
+                        <label for="email">E-mail</label>
+                        <input class="campo" type="email" name="email" />
+                    </p>
+                    <p class="caja">
+                        <label for="telefono">Telefono</label>
+                        <input class="campo" type="tel" name="telefono" />
+                    </p>
+                    <p class="caja">
+                        <label for="asunto">Asunto</label>
+                        <input class="campo" type="text" name="asunto" />
+                    </p>
+                    <p class="block">
+                        <label for="mensaje">Mensaje</label>
+                        <textarea name="mensaje" rows="3"></textarea>
+                    </p>
+                    <p class="block">
+                        <button type="button">Enviar</button>
+                    </p>
+                </form>
+            </div>
+
+            <div id="informacion">
+                <h3>Informacion</h3>
+                <ul>
+                    <li><i class="fas fa-mobile-alt"></i> 818-093-183-33</li>
+                    <li><i class="far fa-envelope"></i> contact@website.com</li>
+                    <li><i class="fas fa-map-marker-alt"></i> st street</li>
+                    <li><i class="far fa-clock"></i> 9:00am - 10:00pm</li>
+                </ul>
+                <br>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste possimus unde consequuntur sequi aperiam sit quas consequatur obcaecati aut eveniet?
+                </p>
+
+                <p>
+                    Company.com
+                </p>
             </div>
         </div>
     </div>
 
     <!--FIN DE CONTENIDO-->
-
-    <!--INICIO DE PIDE DE PAGINA
-    <div class="clearfix"></div>
+    <!-- 
+    INICIO DE PIDE DE PAGINA -->
     <footer id="footer">
-        <div class="wrap">
-            <div id="menu-footer">
-                <h5>Menu</h5>
+
+        <div class="wrap-superior">
+
+            <div id="redes-sociales" class="formato">
                 <ul>
-                    <li><a href="#">ESTUDIO</a></li>
-                    <li><a href="#">ARTISTAS</a></li>
-                    <li><a href="#">TIENDA</a></li>
-                    <li><a href="#">CONTACTO</a></li>
+                    <li><a href="http://www.facebook.com" target="_blank"><i class='bx bxl-facebook-circle'></i></a></li>
+                    <li><a href="http://www.twitter.com" target="_blank"><i class='bx bxl-twitter' ></i></a></li>
+                    <li><a href="http://www.youtube.com" target="_blank"><i class='bx bxl-youtube'></i></a></li>
+                    <li><a href="http://www.instagram.com" target="_blank"><i class='bx bxl-instagram-alt' ></i></a></li>
                 </ul>
             </div>
 
-            <div id="location">
-                <h5>Donde estamos?</h5>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3594.3692520621953!2d-100.17403688550476!3d25.725299816385885!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8662ebd342837e3f%3A0xda5f514c09b05d44!2sRoak%20House!5e0!3m2!1ses-419!2smx!4v1595474437441!5m2!1ses-419!2smx" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+            <div id="logo-footer" class="formato">
+                <a href="#"><img src="./img/logo-inv.png" title="Roack house" /></a>
             </div>
 
-            <div id="info">
-                <h5>Autor</h5>
-                <p>Desarrollado por &copy; Peace Frog Movement<p>
+            <div id="menu-footer" class="formato">
+                <ul>
+                    <li><a class="left" href="#">INICIO</a></li>
+                    <li><a class="left" href="#enlace-menu-1">NOSOTROS</a></li>
+                    <li><a class="left" href="#enlace-menu-2">ARTISTAS</a></li>
+                    <li><a class="left" href="#enlace-menu-3">TATUAJES</a></li>
+                    <li><a class="left" href="#enlace-menu-4">CONTACTO</a></li>
+                </ul>
             </div>
+
+        </div>
+        <hr class="hr">
+
+
+        <div id="derechos">
+            <span>&copy; Derechos reservados | QUAZAR | Peace Frog Movement </span>
+        </div>
+        <!-- <div id="info">
+                <h5>Autor</h5>
+                <p> &copy; Copyright 2020 Peace Frog Movement - All Rights Reserved
+                    <p>
+            </div> -->
         </div>
     </footer>
-    FIN DE PIDE DE PAGINA-->
+    <!-- FIN DE PIDE DE PAGINA -->
 
-<!--SCRIPT JAVASCRIPT-->
-<script type="text/javascript" src="./js/main.js"></script>
-<script type="text/javascript" src="./js/slider.js"></script>
+
+
+    <!--SCRIPT JAVASCRIPT-->
+    <script type="text/javascript" src="./js/main.js"></script>
+    <script type="text/javascript" src="./js/slider.js"></script>
 </body>
 
 </html>
