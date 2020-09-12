@@ -33,12 +33,13 @@ body {
     align-items: center;
     transition: 600ms;
     padding: 40px 100px;
-    z-index: 100000;
+    z-index: 9;
 }
 
 #header.sticky {
     padding: 5px 100px;
     background: #ffffff;
+    z-index: 11;
 }
 
 .logo img {
@@ -148,6 +149,7 @@ a.underline-invertido:before {
     cursor: pointer;
     color: #ccc;
     text-decoration: none;
+    z-index: 10;
 }
 
 #btn-prev {
@@ -470,8 +472,8 @@ section.fade {
 
 .img-show {
     position: relative;
-    top: 7%;
-    width: 55%;
+    top: 8%;
+    width: 50%;
     justify-content: center;
     transform: scale(0);
     display: block;
@@ -486,7 +488,7 @@ section.fade {
 .bx.bx-x {
     position: absolute;
     color: white;
-    top: 13%;
+    top: 19%;
     right: 10px;
     font-size: 40px;
     cursor: pointer;
@@ -648,7 +650,6 @@ section.fade {
 
 #redes-sociales ul li a :hover {
     color: red;
-    transform: scale(1.20);
     transition: all 0.3s;
 }
 
@@ -699,6 +700,9 @@ section.fade {
     #menu-1 {
         flex-flow: column;
     }
+    .img-show {
+        width: 75%;
+    }
 }
 
 @media (max-width: 982px) {
@@ -742,6 +746,13 @@ section.fade {
     #footer #menu-footer,
     #footer #logo-footer {
         padding: 10px;
+    }
+    .img-show {
+        width: 80%;
+    }
+    .bx.bx-x {
+        top: 25%;
+        right: 10px;
     }
 }
 
@@ -804,5 +815,24 @@ section.fade {
     }
     #redes-sociales ul li a {
         margin: 5px;
+    }
+    .img-show {
+        width: 90%;
+    }
+    .bx.bx-x {
+        top: 32%;
+        right: 10px;
+    }
+    #header {
+        position: absolute;
+    }
+    #header.sticky {
+        background: none;
+    }
+    #header.sticky ul li a {
+        color: white;
+    }
+    img.logo-invertido {
+        filter: invert(0%);
     }
 }

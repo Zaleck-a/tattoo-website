@@ -73,24 +73,24 @@ const addImage = (srcImage, altImage) => {
 
 
 
-window.addEventListener('scroll', () => {
-    let scrollTop = document.documentElement.scrollTop;
+// window.addEventListener('scroll', () => {
+//     let scrollTop = document.documentElement.scrollTop;
 
-    containerImage.addEventListener('click', () => {
-        containerImage.classList.toggle('move');
-        imagesContainer.classList.toggle('show');
+containerImage.addEventListener('click', () => {
+    containerImage.classList.toggle('move');
+    imagesContainer.classList.toggle('show');
 
-
-    });
-
-
-    if (scrollTop == 0) {
-        console.log('entro a la condicion');
-        imagesContainer.classList.remove('show');
-        containerImage.classList.remove('move');
-    }
 
 });
+
+
+// if (scrollTop == 0) {
+//     console.log('entro a la condicion');
+//     imagesContainer.classList.remove('show');
+//     containerImage.classList.remove('move');
+// }
+
+// });
 
 
 
